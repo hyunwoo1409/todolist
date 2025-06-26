@@ -1,12 +1,9 @@
 <script>
-  const path = location.pathname;
-  const search = location.search;
-  const hash = location.hash;
-
   const base = '/todolist';
-  const cleanPath = path.startsWith(base)
-    ? path.slice(base.length)
-    : path;
+  const current = location.pathname;
+  const redirectPath = current.startsWith(base)
+    ? current
+    : base + current;
 
-  location.replace(base + cleanPath + search + hash);
+  location.replace(redirectPath + location.search + location.hash);
 </script>
