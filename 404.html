@@ -1,9 +1,9 @@
 <script>
+  const path = location.pathname;
   const base = '/todolist';
-  const current = location.pathname;
-  const redirectPath = current.startsWith(base)
-    ? current
-    : base + current;
 
-  location.replace(redirectPath + location.search + location.hash);
+  // base가 여러 번 붙는 무한 루프 방지
+  const cleaned = path.startsWith(base) ? path.slice(base.length) : path;
+
+  location.replace(base + cleaned + location.search + location.hash);
 </script>
