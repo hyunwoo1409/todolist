@@ -1,4 +1,6 @@
 <script>
-  const path = location.pathname.replace(/^\/todolist/, '');
-  location.replace('/todolist' + path + location.search + location.hash);
+  const current = location.pathname;
+  const base = '/todolist';
+  const cleaned = current.startsWith(base) ? current.slice(base.length) : current;
+  location.replace(base + cleaned + location.search + location.hash);
 </script>
