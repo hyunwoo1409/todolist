@@ -8,7 +8,7 @@ import MyPage from './pages/MyPage';
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
+      <Route index element={<Login />} />
       <Route path="/home" element={<Home />} />
       <Route path="/wishlist" element={<Wishlist />} />
       <Route path="/mypage" element={<MyPage />} />
