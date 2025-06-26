@@ -1,9 +1,6 @@
 <script>
   const path = location.pathname;
   const base = '/todolist';
-
-  // base가 여러 번 붙는 무한 루프 방지
   const cleaned = path.startsWith(base) ? path.slice(base.length) : path;
-
   location.replace(base + cleaned + location.search + location.hash);
 </script>
