@@ -10,8 +10,8 @@ export default function App() {
     <Routes>
       <Route index element={<Login />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/wishlist" element={<Wishlist />} />
-      <Route path="/mypage" element={<MyPage />} />
+      <Route path="/home/wishlist" element={<Wishlist />} />
+      <Route path="/home/mypage" element={<MyPage />} />
     </Routes>
   );
 }
