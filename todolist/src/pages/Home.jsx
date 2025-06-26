@@ -3,6 +3,7 @@ import { useUserStore } from "../stores/userStore";
 import InputWithAdd from "../components/InputWithAdd"; 
 import LogoutButton from "../components/LogoutButton";
 import ExpandableList from "../components/ExpandableList";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const { todos, addTodo, toggleTodo, deleteTodo } = useTodoStore();
