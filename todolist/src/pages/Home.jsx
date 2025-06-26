@@ -18,8 +18,8 @@ export default function Home() {
 
           {/* 상단 버튼 */}
           <div className="flex gap-2">
-            <a href="/wishlist" className="bg-blue-500 text-white px-3 py-1 rounded">📝 Wishlist</a>
-            <a href="/mypage" className="bg-purple-500 text-white px-3 py-1 rounded">👨‍💻 MyPage</a>
+            <Link to="wishlist" className="bg-blue-500 text-white px-3 py-1 rounded">📝 Wishlist</Link>
+            <Link to="mypage" className="bg-purple-500 text-white px-3 py-1 rounded">👨‍💻 MyPage</Link>
             <LogoutButton />
           </div>
         </div>
